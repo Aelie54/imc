@@ -37,7 +37,7 @@ function calcul_Imc() {
   //calcul de l'IMC
   let calculateImc = Math.round((imc.poids / Math.pow(imc.taille, 2)) * 10000);
 
-  //les données qui font references qux chqmps inputs qui sont envoyées dans le store pour réutilisation dont la donnée d el'imc que l'on retrouvera dans le tableau recap
+  //les données qui font references Aux chAmps inputs qui sont envoyées dans le store pour réutilisation dont la donnée d el'imc que l'on retrouvera dans le tableau recap
   store.imc = calculateImc;
   store.taille = imc.taille;
   store.poids = imc.poids;
