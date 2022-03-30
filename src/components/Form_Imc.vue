@@ -2,11 +2,11 @@
   <div>
     <h1>Entrez vos données personnelles </h1><br>
     <form @submit.prevent="calcul_Imc">
-      <label for="taille"> Entrer taille : </label>
-      <input type="number" name="taille" id="taille" placeholder="taille en cm"
+      <label for="taille"> Entrer taille (cm) : </label>
+      <input type="number" name="taille" id="taille" placeholder="en cm"  min="130" max="250"
         v-model="imc.taille" /><br>
-      <label for="poids"> Entrer poids : </label>
-      <input type="number" name="poids" id="poids" placeholder="poids en kg"
+      <label for="poids"> Entrer poids (kg) : </label>
+      <input type="number" name="poids" id="poids" placeholder="en kg"  min="30" max="150"
         v-model="imc.poids" /><br><br>
       <input type="submit" value="Calcul de votre IMC" /><br><br>
     </form>
