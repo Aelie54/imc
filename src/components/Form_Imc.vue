@@ -16,32 +16,33 @@
 
 <script setup lang="ts">
 
-//pour rendre "reactif"imc
-import { reactive } from "vue";
+    //pour rendre "reactif"imc
+    import { reactive } from "vue";
 
-//pour garder les donées entrées dans le store et les réutiliser dans le tableau
-import { useImcStore } from "@/stores/imc";
+    //pour garder les donées entrées dans le store et les réutiliser dans le tableau
+    import { useImcStore } from "@/stores/imc";
 
-//données réactives qui vont prendre les valeurs des champs inputs
-const imc = reactive({
-  taille: 0,
-  poids: 0,
-});
+    //données réactives qui vont prendre les valeurs des champs inputs
+    const imc = reactive({
+        taille: 0,
+        poids: 0,
+    });
 
-//store
-const store = useImcStore();
+    //store
+    const store = useImcStore();
 
-//fonction permettant le calcul de l'imc
-function calcul_Imc() {
+    //fonction permettant le calcul de l'imc
+    function calcul_Imc() {
 
-  //calcul de l'IMC
-  let calculateImc = Math.round((imc.poids / Math.pow(imc.taille, 2)) * 10000);
+        //calcul de l'IMC
+        let calculateImc = Math.round((imc.poids / Math.pow(imc.taille, 2)) * 10000);
 
-  //les données qui font references Aux chAmps inputs qui sont envoyées dans le store pour réutilisation dont la donnée d el'imc que l'on retrouvera dans le tableau recap
-  store.imc = calculateImc;
-  store.taille = imc.taille;
-  store.poids = imc.poids;
-}
+        //les données qui font references Aux chAmps inputs qui sont envoyées dans le store pour réutilisation dont la donnée d el'imc que l'on retrouvera dans le tableau recap
+        store.imc = calculateImc;
+        store.taille = imc.taille;
+        store.poids = imc.poids;
+    }
+
 </script>
 
 <style>

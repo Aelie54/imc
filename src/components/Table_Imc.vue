@@ -20,24 +20,30 @@
 </template>
 
 <script setup lang="ts">
-//pour pouvoir utiliser les données du store il faut déjà un import
-import { useImcStore } from "@/stores/imc";
-//et ne pas oublierle const
-const store = useImcStore();
+
+  //pour pouvoir utiliser les données du store il faut déjà un import
+  import { useImcStore } from "@/stores/imc";
+
+  //et ne pas oublierle const
+  const store = useImcStore();
+
 </script>
 
-<style>
-table {
-  margin: 20px;
-}
 
-td {
-  padding: 10px;
-  width: 700px;
+<style>
+
+table {
+  margin: 10px;
 }
 
 table, th, td {
   border: 1px solid;
 }
+
+td {
+  width: 600px;
+  padding: 20px;
+}
+
 </style>
 

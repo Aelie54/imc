@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+
+//PINIAAAAAAAAH
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
