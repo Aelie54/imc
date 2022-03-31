@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       <tr>
-        <!-- Données du store en "store. ... ""-->
+        <!-- Données du store en "store. ""-->
         <td>{{ store.taille }}</td>
         <td>{{ store.poids }}</td>
         <td>{{ store.imc }}</td>
@@ -21,10 +21,11 @@
 
 <script setup lang="ts">
 
-  //pour pouvoir utiliser les données du store il faut déjà un import
+  //pour pouvoir utiliser les données du store,
+  //il faut déjà un import
   import { useImcStore } from "@/stores/imc";
 
-  //et ne pas oublierle const
+  //et ne pas oublierle const pour utiliser le store
   const store = useImcStore();
 
 </script>
